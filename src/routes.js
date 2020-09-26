@@ -4,6 +4,7 @@ import Team from 'views/Team.js';
 import StorageEquipments from 'views/StorageEquipments.js';
 import Ticket from 'views/Ticket.js';
 import KnowledgeBase from 'views/KnowledgeBase.js';
+import testPage from 'views/testPage';
 
 var routes = [
     {
@@ -40,6 +41,20 @@ var routes = [
         icon: 'tim-icons icon-app',
         component: KnowledgeBase,
         layout: '/admin'
+    },
+    {
+        collapse: true,
+        name: 'Pages',
+        icon: 'tim-icons icon-app',
+        state: 'pageCollapse',
+        views: [
+            {
+                path: '/test-page',
+                name: 'Test Page',
+                layout: '/admin',
+                state: 'pageCollapse2'
+            }
+        ]
     }
 ];
 export default routes;
